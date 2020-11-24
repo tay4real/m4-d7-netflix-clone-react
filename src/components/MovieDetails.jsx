@@ -5,16 +5,34 @@ import {MovieComments} from './MovieComments'
 
 class MovieDetails extends React.Component {
     state = {
-        movie: null
+        movie: null,
+        movies: []
     }
 
     componentDidMount() {
-        let movieIdFromTheSearchBar = this.props.match.params.stefano;
-        let correctMovieToLoad = allTheMovies.find(movie => movie.id.toString() === movieIdFromTheSearchBar)
+        let movieIdFromTheSearchBar = this.props.match.params.id;
+        let correctMovieToLoad = this.state.movies.find(movie => movie.id.toString() === movieIdFromTheSearchBar)
         this.setState({
             dish: correctMovieToLoad
         })
     }
+
+    getMovies = async (query) => {
+        //fetch from server all movie objects of a saga or genre
+        //set the constructor according to the resul
+    
+        let response = await fetch(
+          `http://www.omdbapi.com/?apikey=a0871843&s=${query}`
+        )
+    
+        if (response.ok) {
+          let result = await response.json() //search object
+          console.log(result)
+          this.setState({movies: result.Search})
+        } else {
+          alert("something went wrong")
+        }
+      }
 
     render() {
         return (

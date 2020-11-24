@@ -12,7 +12,7 @@ import MovieDetails from './components/MovieDetails'
 class App extends React.Component {
   render() {
     return (
-      <>
+    
         <Router>
           <NavBar />
           <Route
@@ -25,8 +25,12 @@ class App extends React.Component {
           />
          
           <Route path="/details/:id" component={MovieDetails} />
+          <Route path="/tvshows" exact component={MovieDetails} />
+          <Route path="/movies" exact component={MovieDetails} />
+          <Route path="/recent" exact component={MovieDetails} />
+          <Route path="/mylist" exact component={MovieDetails} />
         </Router>
-      </>
+     
     )
   }
 }

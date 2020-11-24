@@ -2,7 +2,22 @@
 
 body {
   font-family: "Open Sans", sans-serif;
-  background: #0f171e;
+}
+
+body,
+nav {
+  background-color: #221f1f;
+}
+
+h2,
+h4,
+.icons {
+  color: #f5f5f1;
+}
+
+#kids {
+  color: #f5f5f1;
+  font-size: 0.8em;
 }
 
 h3 {
@@ -85,6 +100,7 @@ nav .dropdown-toggle:focus {
 }
 
 footer {
+  color: #838383;
   text-align: center;
 }
 

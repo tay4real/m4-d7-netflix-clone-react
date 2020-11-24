@@ -45,7 +45,7 @@ class Home extends Component {
     <> 
         <Header />
       <Container>
-        <Row className="justify-content-center mt-3"> 
+        <Row className="justify-content-center"> 
           <Col md={4}>
             <Gallery saga="Harry Potter" />
           </Col>
