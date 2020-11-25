@@ -10,6 +10,7 @@ import Results from "./Results"
 class Home extends Component {
     state = {
         movies: [],
+        
       }
     
       
@@ -45,17 +46,22 @@ class Home extends Component {
     <> 
         <Header />
       <Container>
-        <Row className="justify-content-center"> 
-          <Col md={4}>
+      
+      <Row className="mt-5">
+      <h4>Trending now</h4>
+        <Carousel className="m-0 p-0">  
+          <Carousel.Item>
             <Gallery saga="Harry Potter" />
-          </Col>
-          <Col md={4}>
+          </Carousel.Item>
+          <Carousel.Item>
             <Gallery saga="Lord of the Rings" />
-          </Col>
-          <Col md={4}>
+          </Carousel.Item>
+          <Carousel.Item>
             <Gallery saga="Star Wars" />
-          </Col>
-        </Row>
+          </Carousel.Item>
+        </Carousel>
+      </Row>
+          
         <Row>
             <Col>
             {

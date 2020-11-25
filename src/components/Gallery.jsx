@@ -1,5 +1,5 @@
 import React from "react"
-import {Carousel, Col} from "react-bootstrap"
+import {Row, Col} from "react-bootstrap"
 
 class Gallery extends React.Component {
   state = {
@@ -7,6 +7,7 @@ class Gallery extends React.Component {
   }
 
   componentDidMount = async () => {
+    console.log(this.props.saga)
     let query = this.props.saga
     await this.getMovies(query)
     console.log(this.state.movies)
@@ -31,26 +32,19 @@ class Gallery extends React.Component {
 
   render() {
     return (
-        <Col xs="4" >
-            <Carousel >
-            
-              {this.state.movies.map((movie) => (
-                <Carousel.Item key={movie.imdbID}>
+
+          <Row className="my-4 text-center row-cols-1 row-cols-md-2 row-cols-lg-4 row-cols-xl-6">   
+            {this.state.movies.map((movie) => (
+                <Col key={movie.imdbID}>
                   <img
                     className="d-block w-100"
-                    style={{objectFit:"cover", width: 20 + "vw", height: 35 + "vw", objectPosition: "top"}}
                     src={movie.Poster}
-                    alt="First slide"
+                    alt={movie.Title}
                   />
-                  <Carousel.Caption style={{width: 20 + "vw",
-background: "linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 80%)", position: "relative", left: "0", bottom: 6 + "vw"}}>
-                    <h3 style={{overflow: "hidden", whiteSpace:"nowrap", textOverflow:"ellipsis"}}>{movie.Title}</h3>
-                    <p>{movie.Year} </p>
-                  </Carousel.Caption>
-                </Carousel.Item>
-              ))}
-            </Carousel>
-          </Col>
+                  
+                </Col>
+              ))}       
+          </Row>  
     )
   }
 }
