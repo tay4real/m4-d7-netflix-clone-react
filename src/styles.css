@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,600;1,400&display=swap");
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background: #0f171e;
+}
+
+h3 {
+  font-size: 19px;
+  display: inline-block;
+}
+
+a {
+  color: #01a3db;
+}
+
+a:hover {
+  color: #14b5eb;
+}
+
+.prime-logo {
+  height: 19px;
+  position: relative;
+  top: 2px;
+}
+
+.strive-nav-bg {
+  background-color: #0f171e;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+}
+
+.carousel {
+  margin-top: 77px;
+}
+
+nav .dropdown-toggle {
+  color: rgba(255, 255, 255, 0.65);
+}
+nav .dropdown-toggle:hover,
+nav .dropdown-toggle:focus {
+  color: white;
+}
+
+/* user account btn */
+.btn-ghost.dropdown-toggle span {
+  display: inline-block;
+  width: 80px;
+  position: relative;
+  top: 0.5rem;
+  text-overflow: ellipsis; /*truncates the text over 80px overflow with three ...*/
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.nav-link {
+  font-weight: 600;
+}
+
+.navbar-expand-lg .nav-item .nav-link {
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0.05rem;
+  margin: 8px;
+}
+
+.navbar-expand-lg .nav-item.active .nav-link {
+  border-bottom: 1px solid white;
+}
+
+.little-element {
+  color: white;
+  background: red;
+  position: absolute;
+  bottom: 10px;
+  right: 16px;
+  height: 33px;
+  padding: 0.6rem;
+}
+
+footer {
+  text-align: center;
+}
+
+footer .footer-logo {
+  display: inline-block;
+  width: 120px;
+  height: 48px;
+  background-image: url("assets/logo/strivevideo.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+footer ul {
+  list-style: none;
+}
+footer ul li {
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+footer ul:last-of-type {
+  color: rgba(255, 255, 255, 0.45);
+}
